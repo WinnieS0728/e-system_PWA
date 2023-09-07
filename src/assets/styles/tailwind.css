@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .pagePadding {
+    @apply px-4 sm:px-12 md:px-20;
+  }
+}

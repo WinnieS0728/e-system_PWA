@@ -1,6 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import path from "path";
 import { VitePWA } from "vite-plugin-pwa";
+
+function resolve(dir: string) {
+  return path.join(__dirname, "/", dir);
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +18,7 @@ export default defineConfig({
         description: "convert e-system to an app",
         display: "standalone",
         theme_color: "#fff",
-        start_url: ".",
+        start_url: "./",
         icons: [
           {
             src: "./pwa/16.png",
@@ -44,5 +49,13 @@ export default defineConfig({
       },
     }),
   ],
-  base:"e-system_PWA/dist"
+  base: "/e-system_PWA/dist",
+  resolve: {
+    alias: {
+      "@": resolve("src"),
+      "@styles": resolve("src/assets/styles"),
+      "@components": resolve("src/components"),
+      "@data":resolve("src/data")
+    },
+  },
 });
