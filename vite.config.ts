@@ -44,4 +44,5 @@ export default defineConfig({
       },
     }),
   ],
+  base:"e-system_PWA/dist"
 });
