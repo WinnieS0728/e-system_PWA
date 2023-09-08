@@ -16,7 +16,7 @@ export const Intro = () => {
           如需使用網頁版, 請點擊
           <a
             href='https://esys.orange-electronic.com/?url=%2FDefault%2FIndex'
-            className='p-2 text-blue-500 underline underline-offset-4'
+            className='p-2 text-blue-500 underline underline-offset-4 dark:text-blue-300'
           >
             此連結
           </a>
