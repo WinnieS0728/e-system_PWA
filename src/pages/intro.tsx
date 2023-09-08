@@ -34,6 +34,9 @@ export const Intro = () => {
           </div>
         </section>
       </main>
+      <footer className="text-center py-4">
+        Copyright © 2023 Orange Electronic.
+      </footer>
     </>
   );
 };
