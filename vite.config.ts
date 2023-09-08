@@ -17,7 +17,8 @@ export default defineConfig({
         short_name: "e-system",
         description: "convert e-system to an app",
         display: "standalone",
-        theme_color: "#fff",
+        theme_color: "#e95005",
+        background_color: "#e6e6e6",
         start_url: "./",
         icons: [
           {
