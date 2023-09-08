@@ -8,14 +8,14 @@
   }
 
   .title {
-    @apply bg-gradient-to-r from-OrangeMain-600 px-4 py-2 text-white;
+    @apply bg-gradient-to-r from-OrangeMain-500 px-4 py-2 text-white;
   }
 
   .navLink {
-    @apply px-8 py-2 ring-2 ring-OrangeMain-300 rounded;
+    @apply px-8 py-2 ring-2 ring-OrangeMain-400 rounded;
 
     &.active {
-      @apply bg-OrangeMain-500 text-white ring-0;
+      @apply bg-OrangeMain-400 text-white ring-0;
     }
   }
 }

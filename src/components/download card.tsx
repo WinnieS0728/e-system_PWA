@@ -33,7 +33,7 @@ export function DownloadCard({ type, browser }: props) {
           {data.name}
           <Icons.extend_arrow
             className={cn(
-              "text-OrangeMain-500 transition-transform duration-300",
+              "text-OrangeMain-400 transition-transform duration-300",
               {
                 "-rotate-180": open,
               }
