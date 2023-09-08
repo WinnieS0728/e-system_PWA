@@ -53,9 +53,11 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": resolve("src"),
+      "@img": resolve("src/assets/images"),
       "@styles": resolve("src/assets/styles"),
       "@components": resolve("src/components"),
-      "@data":resolve("src/data")
+      "@layouts": resolve("src/layouts"),
+      "@data": resolve("src/data"),
     },
   },
 });

@@ -1,5 +1,6 @@
 import { deviceType } from "@/data/web support";
 import { webSupport } from "@/data/web support";
+import { Icons } from "./UI/icons";
 
 interface props {
   type: deviceType;
@@ -7,7 +8,7 @@ interface props {
 
 export function SupportTable({ type }: props) {
   return (
-    <table>
+    <table className='mx-auto'>
       <thead>
         <tr>
           <th colSpan={webSupport[`${type}`].length}>
@@ -23,19 +24,23 @@ export function SupportTable({ type }: props) {
       <tbody>
         <tr>
           {webSupport[`${type}`].map((web, index) => {
-            let icon: string;
+            let icon: JSX.Element;
             switch (web.support) {
               case true:
-                icon = "yes";
+                icon = <Icons.yes className='text-green-500 text-xl' />;
                 break;
               case false:
-                icon = "no";
+                icon = <Icons.no className="text-red-500 text-xl" />;
                 break;
               default:
-                icon = "?";
+                icon = <Icons.unknown className="text-yellow-500 text-xl"/>;
                 break;
             }
-            return <td key={index}>{icon}</td>;
+            return (
+              <td key={index}>
+                <span className="flex justify-center items-center">{icon}</span>
+              </td>
+            );
           })}
         </tr>
       </tbody>

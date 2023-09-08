@@ -1,5 +1,8 @@
 // import { useLayoutEffect } from "react";
-import { Intro } from "./components/intro";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Intro } from "./pages/intro";
+import { ComputerDownload } from "./pages/computer";
+import { PhoneDownload } from "./pages/phone";
 
 function App() {
   // useLayoutEffect(() => {
@@ -11,7 +14,24 @@ function App() {
   // }, []);
   return (
     <>
-      <Intro />
+      <BrowserRouter basename='e-system_PWA/dist'>
+        <Routes>
+          <Route
+            path='/'
+            element={<Intro />}
+          >
+            <Route
+              index
+              // path='computer'
+              element={<ComputerDownload />}
+            />
+            <Route
+              path='phone'
+              element={<PhoneDownload />}
+            />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

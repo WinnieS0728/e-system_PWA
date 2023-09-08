@@ -1,6 +1,7 @@
 export type deviceType = "computer" | "phone";
+export type browserType = "chrome" | "edge" | "firefox" | "safari"
 export type webSupportType = {
-  name: "chrome" | "edge" | "firefox" | "safari";
+  name: browserType;
   support: boolean | "unknown";
 };
 
@@ -20,7 +21,7 @@ export const webSupport: Record<deviceType, webSupportType[]> = {
     },
     {
       name: "safari",
-      support: true,
+      support: false,
     },
   ],
   phone: [

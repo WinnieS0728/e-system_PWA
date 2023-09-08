@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 
-import "@styles/tailwind.css"
-import "@styles/index.css"
+import "@styles/tailwind.scss"
+import "@styles/index.scss"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <App />
