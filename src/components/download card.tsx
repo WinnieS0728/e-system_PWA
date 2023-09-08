@@ -52,7 +52,7 @@ export function DownloadCard({ type, browser }: props) {
           }}
         >
           <p>{data.description}</p>
-          <div className='flex gap-2 items-center'>
+          <div className='flex w-full gap-2 items-center'>
             {data.imgSrc.map((src, index) => (
               <Fragment key={index}>
                 {index > 0 && <Icons.next />}
@@ -60,7 +60,7 @@ export function DownloadCard({ type, browser }: props) {
                   <img
                     src={src}
                     alt='下載方式說明圖片'
-                    className="max-w-sm"
+                    className="w-full max-w-sm"
                   />
                   <span className='absolute -top-2 -left-2 bg-yellow-500 w-6 aspect-square rounded-full flex justify-center items-center'>
                     {index + 1}

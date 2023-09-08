@@ -7,7 +7,7 @@ interface props {
 export function Download({ device }: props) {
   return (
     <>
-      <article className="grid gap-2">
+      <article className="flex flex-col gap-2">
         <DownloadCard
           type={device}
           browser='chrome'
